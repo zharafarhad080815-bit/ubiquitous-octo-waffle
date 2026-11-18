@@ -1,0 +1,66 @@
+<!--In this assignment, you will build a My Digital Zoo Manager webpage using HTML, CSS, and JavaScript. You will create animal zones inside a zoo container, use JavaScript to explore the DOM tree, identify parent, child, and sibling nodes, check different node types, and update the webpage content and styles through DOM methods.-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Digital Zoo Manager</title>
+    </head>
+    <body>
+        <h1>My Digital Zoo Manager</h1>
+        <div id="zoo">
+            <div id="zone1" class="zone"></div>
+            <div id="zone2" class="zone"></div>
+            <div id="zone3" class="zone"></div>
+        </div>
+        <button onclick="exploreDOM()">Explore DOM</button>
+        <p id="status-message"></p>
+
+        <script>
+            function exploreDOM() {
+                // Get the zoo container
+                const zoo = document.getElementById("zoo");
+
+                // Get the first zone
+                const zone1 = document.getElementById("zone1");
+
+                // Get the second zone
+                const zone2 = document.getElementById("zone2");
+
+                // Get the third zone
+                const zone3 = document.getElementById("zone3");
+
+                // Identify parent node
+                console.log("Parent node of zone1:", zone1.parentNode);
+
+                // Identify child nodes
+                console.log("Child nodes of zoo:", zoo.childNodes);
+
+                // Identify sibling nodes
+                console.log("Sibling node of zone1:", zone1.nextSibling);
+                console.log("Sibling node of zone2:", zone2.previousSibling);
+            }
+        </script>
+
+        <style>
+            .zone {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 10px;
+                display: inline-block;
+                text-align: center;
+                line-height: 100px;
+            }
+            .zone1 {
+                background-color: lightblue;
+            }
+            .zone2 {
+                background-color: lightgreen;
+            }
+            .zone3 {
+                background-color: lightcoral;
+            }
+        </style>
+    </body>
+</html>
